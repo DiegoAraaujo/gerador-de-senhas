@@ -449,6 +449,9 @@ a:hover {
     cursor: pointer;
     transition: transform 0.2s;
 }
+#fechar-compartilhamento:hover{
+    transform: scale(1.1);
+}
 #logos{
     display: flex;
     justify-content: space-around;
