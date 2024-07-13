@@ -30,16 +30,30 @@ function motrarRecadoSemClique (){
 function esconderSenha(){
     let olhoaberto = document.getElementById("olho-aberto");
     let olhofechado = document.getElementById("olho-fechado");
-    
     olhoaberto.style.display = "none"
     olhofechado.style.display = "inline-block"
+
+    let senha = document.getElementById('senha')
+    let campoSenha = document.getElementById('asteriscos');
+    let conteudo = campoSenha.textContent;
+    let senhaOculta = ''
+
+    for (let i = 0; i < conteudo.length; i++){
+        senhaOculta += '*';
+    }
+    campoSenha.innerText = senhaOculta
+    campoSenha.style.display = 'inline-block'
+    senha.style.display = 'none'
+
 }
 function exibirSenha(){
     let olhoaberto = document.getElementById("olho-aberto");
     let olhofechado = document.getElementById("olho-fechado");
-    
     olhoaberto.style.display = "inline-block"
     olhofechado.style.display = "none"
+
+    document.getElementById('asteriscos').style.display = 'none';
+    document.getElementById('senha').style.display = 'inline-block'
 }
 
 function apagarTamanhoPalavra(){
@@ -62,9 +76,14 @@ function copiarParaAreaDeTransferencia() {
 function compartilharFuncao(){
    let opcoesDeCompartilhar = document.getElementById("contatos")
    opcoesDeCompartilhar.style.display = "block"
-   senha = "aaaaa"
+   let campoSenha = document.getElementById('senha').textContent;
    let blocoSenha = document.getElementById("senha-compartilhar");
-   blocoSenha.innerText += senha
+   if (campoSenha == 'SUA SENHA AQUI'){
+        return;
+   }else{
+    let senha = campoSenha
+    blocoSenha.innerText += senha
+   }
 
 }
 function fecharCompartilhamento(){
@@ -73,8 +92,17 @@ function fecharCompartilhamento(){
 }
 
 function shareViaWhatsApp() {
-    var valorCompartilhar = "Este é o valor que será compartilhado!";
-    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(valorCompartilhar)}`, '_blank');
+    let camposenha = document.getElementById("senha");
+
+    if(camposenha.textContent !== 'SUA SENHA AQUI'){
+        let senha = document.getElementById('senha').textContent;
+        var valorCompartilhar = "SUA SENHA É: ";
+        valorCompartilhar += senha;
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(valorCompartilhar)}`, '_blank');
+    }else{
+        var valorCompartilhar = "NENHUMA SENHA GERADA";
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(valorCompartilhar)}`, '_blank');
+    }
 }
 
 function shareViaSMS() {
@@ -83,7 +111,9 @@ function shareViaSMS() {
 }
 
 function shareViaInstagram() {
-    var valorCompartilhar = "Este é o valor que será compartilhado!";
+    let senha = document.getElementById('senha').textContent;
+    var valorCompartilhar = "SUA SENHA É: ";
+    valorCompartilhar += senha;
     var url = `https://www.instagram.com/direct/inbox/?hl=en&text=${encodeURIComponent(valorCompartilhar)}`;
     window.open(url, '_blank');
 }
@@ -103,11 +133,19 @@ function mostrarBloco(blocoId) {
 }
 
 function apagarNumeros(){
-
+    document.getElementById('avancar-numeros').style.display ='inline-block'
+    document.getElementById('voltar-numeros').style.display='inline-block'
+    document.getElementById('gerar-personalizada2').style.display ='none'
+    document.getElementById("quantidade-numeros").value = ''
 }
 function apagarLetras(){
-
+    document.getElementById('avancar-letras').style.display ='inline-block'
+    document.getElementById('voltar-letras').style.display='inline-block'
+    document.getElementById('gerar-personalizada1').style.display ='none'
+    document.getElementById("quantidade-letras").value = ''
 }
 function apagarEspeciais(){
-    
+    document.getElementById('voltar-especiais').style.display='inline-block'
+    document.getElementById('gerar-personalizada3').style.display ='inline-block'
+    document.getElementById("quantidade-especiais").value =''
 }

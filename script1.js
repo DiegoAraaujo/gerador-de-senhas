@@ -74,18 +74,36 @@ function gerarSenhaPersonalizada(){
     let numeros = Number(document.getElementById("quantidade-numeros").value);
     let especiais = Number(document.getElementById("quantidade-especiais").value);
     let quantidade = Number(document.getElementById("tamanho-palavra").value);
+    let senhadiv = document.getElementById("senha")
 
     if (letras + numeros + especiais !== quantidade) {
         window.alert("A soma dos campos não corresponde à quantidade total desejada.");
         return;
     }
-    let camposenha = document.getElementById("senha")
-    camposenha.innerText = embaralharString(senhaP);
-
+    if(quantidade > 0){
+        let camposenha = document.getElementById("senha")
+        camposenha.innerText = embaralharString(senhaP);
+    
+        let asteriscos =  document.getElementById("asteriscos")
+        asteriscos.innerText = camposenha.textContent;
+    }
+    if(senhadiv.textContent !== 'SUA SENHA AQUI'){
+        document.getElementById('boneco1').style.display ='none'
+        document.getElementById('boneco2').style.display ='block'
+    }
 }
 
 function gerarSenhaAleatoria() {
     let camposenha = document.getElementById("senha")
+    let asteriscos = document.getElementById("asteriscos")
+    let quantidade = Number(document.getElementById("tamanho-palavra").value);    
     let senha = senhaAleatoria()
-    camposenha.innerText = embaralharString(senha);
+    if(quantidade > 0){
+        camposenha.innerText = embaralharString(senha);
+        asteriscos.innerText = camposenha.textContent;
+    }
+    if(camposenha.textContent !== 'SUA SENHA AQUI'){
+        document.getElementById('boneco1').style.display ='none'
+        document.getElementById('boneco2').style.display ='block'
+    }
 }
