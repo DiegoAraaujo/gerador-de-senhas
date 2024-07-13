@@ -15,28 +15,29 @@
             <div id="campo-quantidade">
                 Tamanho da senha: <br>
                 <div>
-                    <input type="number" name="" id="tamanho-palavra" min="1">
+                    <input type="number" name="" id="tamanho-palavra" min="1" oninput="atualizarPlaceholders()">
                     <img src="imagens/botao-sair.png" alt="" id="botaoSair" onclick="apagarTamanhoPalavra()">
                 </div>
             </div>
             <div id="valores-indicados">
-                <div class="sugestao" onclick="selecionarValor('4')">04</div>
-                <div class="sugestao" onclick="selecionarValor('6')">06</div>
-                <div class="sugestao" onclick="selecionarValor('8')">08</div>
-                <div class="sugestao" onclick="selecionarValor('10')">10</div>
-                <div class="sugestao" onclick="selecionarValor('12')">12</div>
+                <div class="sugestao" onclick="doubleFunctionValues('4')">04</div>
+                <div class="sugestao" onclick="doubleFunctionValues('6')">06</div>
+                <div class="sugestao" onclick="doubleFunctionValues('8')">08</div>
+                <div class="sugestao" onclick="doubleFunctionValues('10')">10</div>
+                <div class="sugestao" onclick="doubleFunctionValues('12')">12</div>
             </div>
             <div id="botoes">
-                <button id="botao1" onclick="teste()">GERAR SENHA</button>
+                <button id="botao1" onclick="gerarSenhaAleatoria()">GERAR SENHA</button>
                 <button id="botao2" onclick="mostrarBloco('bloco-letras')">PERSONALIZAR SENHA</button>
             </div>
         </div>
+
         <div id="bloco-letras" style="display: none;">
             <div id="dado1">
                 <img src="imagens/1.png" alt="">
             </div>
             Quantidade de letras:<br>
-            <input type="number" name="" id="quantidade-letras" min="0">
+            <input type="number" name="" id="quantidade-letras" min="0" oninput="doubleFunctionButton();">
             <img src="imagens/botao-sair.png" alt="" id="apagar-letras">
             <div id="letras-opcoes">
                 Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm,<br> Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Ww, Xx, Yy, Zz
@@ -44,14 +45,16 @@
             <div id="prox-e-volt-letras">
                 <button id="voltar-letras" onclick="mostrarBloco('campo-principal')">voltar</button>
                 <button id="avancar-letras" onclick="mostrarBloco('bloco-numeros')">proximo</button>
+                <button id="gerar-personalizada1" onclick="gerarSenhaPersonalizada()" style="display: none;">GERAR SENHA PERSONALIZADA</button>
             </div>
         </div>
+
         <div id="bloco-numeros" style="display: none;">
             <div id="dado2">
                 <img src="imagens/2.png" alt="">
             </div>
             Quantidade de numeros:<br>
-            <input type="number" name="" id="quantidade-numeros" min="0">
+            <input type="number" name="" id="quantidade-numeros" min="0"  oninput="valoresDinamicos();">
             <img src="imagens/botao-sair.png" alt="" id="apagar-numeros">
             <div id="numeros-opcoes">
                 0,1,2,3,4,5,6,7,8,9
@@ -59,22 +62,26 @@
             <div id="prox-e-volt-num">
                 <button id="voltar-numeros" onclick="mostrarBloco('bloco-letras')">voltar</button>
                 <button id="avancar-numeros" onclick="mostrarBloco('bloco-especiais')">proximo</button>
+                <button id="gerar-personalizada2" onclick="gerarSenhaPersonalizada()" style="display: none;">GERAR SENHA PERSONALIZADA</button>
             </div>
         </div>
+
         <div id="bloco-especiais" style="display: none;">
             <div id="dado3">
                 <img src="imagens/3.png" alt="">
             </div>
             Quantidade de simbolos especiais:<br>
-            <input type="number" name="" id="quantidade-especiais" min="0">
+            <input type="number" name="" id="quantidade-especiais" min="0"  oninput="valoresDinamicos();">
             <img src="imagens/botao-sair.png" alt="" id="apagar-especiais">
             <div id="especiais-opcoes">
-                !,@,#,$,%,^,&,*,(),-,_,+,=,{,},[,],|,\,\,:,;,',<,>,?,,.,/,~,`
+                !,@,#,$,%,^,&,*,(),-,_,+,=,{,},[,],|,\,\,:,;,',,>,?,,.,/,~,`
             </div>
             <div id="prox-e-volt-esp">
                 <button id="voltar-especiais" onclick="mostrarBloco('bloco-numeros')">voltar</button>
+                <button id="gerar-personalizada3" onclick="gerarSenhaPersonalizada()">GERAR SENHA PERSONALIZADA</button>
             </div>
-        </div>        
+        </div>     
+
         <div id="vejaSuaSenha">
             <div id="senha">
                 SUA SENHA AQUI
@@ -111,115 +118,8 @@
                 <a href="#"><img src="imagens/Instagram_icon.png" alt="" onclick="shareViaInstagram()"></a>
             </div>
         </div>
-
-    <script>
-        function selecionarValor(valor) {
-            document.getElementById('tamanho-palavra').value = valor;
-        }
-
-        const imagemGitHub = document.getElementById('imagemGitHub');
-        const creditosDiv = document.getElementById('creditos');
-
-        imagemGitHub.onmouseover = function() {
-            creditosDiv.style.display = 'block';
-        };
-
-        imagemGitHub.onmouseout = function() {
-            creditosDiv.style.display = 'none';
-        };
-
-        imagemGitHub.onclick = function() {
-            creditosDiv.style.display = 'block';
-        };
-
-        function motrarRecadoComClique(){
-            let creditos = document.getElementById("creditos");
-            creditos.style.display = "inline-block";
-        }
-        function sumirCreditosComClique(){
-            let creditos = document.getElementById("creditos");
-            creditos.style.display = "none";
-        }
-        function motrarRecadoSemClique (){
-            let creditos = document.getElementById("creditos");
-            creditos.style.display = "inline-block";
-        }
-
-        function esconderSenha(){
-            let olhoaberto = document.getElementById("olho-aberto");
-            let olhofechado = document.getElementById("olho-fechado");
-            
-            olhoaberto.style.display = "none"
-            olhofechado.style.display = "inline-block"
-        }
-        function exibirSenha(){
-            let olhoaberto = document.getElementById("olho-aberto");
-            let olhofechado = document.getElementById("olho-fechado");
-            
-            olhoaberto.style.display = "inline-block"
-            olhofechado.style.display = "none"
-        }
-        function teste(){
-            let bonceco1 = document.getElementById("boneco1")
-            let bonceco2 = document.getElementById("boneco2")
-
-            boneco1.style.display = "none"
-            boneco2.style.display = "block"
-        }
-        function apagarTamanhoPalavra(){
-            let tamanhoPalavra = document.getElementById("tamanho-palavra");
-            tamanhoPalavra.value = "";
-        }
-        function copiarParaAreaDeTransferencia() {
-            const senhaDiv = document.getElementById('senha');
-            const senhaTexto = senhaDiv.innerText;
-
-            const textarea = document.createElement('textarea');
-            textarea.value = senhaTexto;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-
-            alert('Senha copiada para a área de transferência!');
-        }
-        function compartilharFuncao(){
-           let opcoesDeCompartilhar = document.getElementById("contatos")
-           opcoesDeCompartilhar.style.display = "block"
-           senha = "aaaaa"
-           let blocoSenha = document.getElementById("senha-compartilhar");
-           blocoSenha.innerText += senha
-
-        }
-        function fecharCompartilhamento(){
-            let opcoesDeCompartilhar = document.getElementById("contatos")
-            opcoesDeCompartilhar.style.display = "none"
-        }
-
-        function shareViaWhatsApp() {
-            var valorCompartilhar = "Este é o valor que será compartilhado!";
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(valorCompartilhar)}`, '_blank');
-        }
-
-        function shareViaSMS() {
-            var valorCompartilhar = "Este é o valor que será compartilhado!";
-            window.location.href = `sms:?body=${encodeURIComponent(valorCompartilhar)}`;
-        }
-
-        function shareViaInstagram() {
-            var valorCompartilhar = "Este é o valor que será compartilhado!";
-            var url = `https://www.instagram.com/direct/inbox/?hl=en&text=${encodeURIComponent(valorCompartilhar)}`;
-            window.open(url, '_blank');
-        }
-        function mostrarBloco(blocoId) {
-    document.getElementById('campo-principal').style.display = 'none';
-    document.getElementById('bloco-letras').style.display = 'none';
-    document.getElementById('bloco-numeros').style.display = 'none';
-    document.getElementById('bloco-especiais').style.display = 'none';
-
-    document.getElementById(blocoId).style.display = 'block';
-}
-
-    </script>
+        <script src="estilo.js"></script>
+        <script src="script1.js"></script>
+        <script src="script2.js"></script>
 </body>
 </html>
