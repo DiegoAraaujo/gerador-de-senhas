@@ -101,3 +101,13 @@ function mostrarBloco(blocoId) {
 
         document.getElementById(blocoId).style.display = 'block';
 }
+
+function apagarNumeros(){
+
+}
+function apagarLetras(){
+
+}
+function apagarEspeciais(){
+    
+}

@@ -50,6 +50,8 @@ function ocultarBlocos(){
     let botoaoProximoLetras = document.getElementById('avancar-letras');
     let botaoProximoNumeros = document.getElementById('avancar-numeros');
     let botaovoltarEspeciais =document.getElementById('voltar-especiais');
+    let botaovoltarNum =document.getElementById('voltar-numeros');
+    let botaovoltarLet =document.getElementById('voltar-letras');
     let personalizarSenhaLetras =document.getElementById('gerar-personalizada1');
     let personalizarSenhaNumeros = document.getElementById('gerar-personalizada2');
     let personalizarSenhaEspeciais =document.getElementById('gerar-personalizada3');
@@ -57,13 +59,34 @@ function ocultarBlocos(){
     let numeros = Number(document.getElementById('quantidade-numeros').value);
     let especiais = Number(document.getElementById('quantidade-especiais').value); 
 
-    if (palavra == letras){
-        botoaoProximoLetras.style.display = 'none'
-        personalizarSenhaLetras.style.display ="inline-block"
+    if (numeros == '' && especiais ==''){
+        if (palavra == letras){
+            botoaoProximoLetras.style.display = 'none'
+            personalizarSenhaLetras.style.display ="inline-block"
+            botaovoltarLet.style.display = 'none'
+        }else{
+            botaovoltarLet.style.display = 'inline-block'
+            botoaoProximoLetras.style.display = 'inline-block'
+            personalizarSenhaLetras.style.display ="none"
+        }
     }
-    if (palavra == numeros){
-        botaoProximoNumeros.style.display = 'none'
-        personalizarSenhaNumeros.style.display ="inline-block"
+    if(letras == '' && especiais==''){
+        if (palavra == numeros){
+            botaovoltarNum.style.display = 'none'
+            botaoProximoNumeros.style.display = 'none'
+            personalizarSenhaNumeros.style.display ="inline-block"
+        }else{
+            botaovoltarNum.style.display = 'inline-block'
+            botaoProximoNumeros.style.display = 'inline-block'
+            personalizarSenhaNumeros.style.display ="none"
+        }
+    }
+    if (letras=='' && numeros==''){
+        if (palavra == especiais){
+            botaovoltarEspeciais.style.display ='none'
+        }else{
+            botaovoltarEspeciais.style.display ='inline-block'
+        }
     }
 }
 function doubleFunctionButton(){
