@@ -178,7 +178,7 @@ main {
 #gerar-personalizada1 {
     font-size: 12px;
     background-color: #607d8b;
-    padding: 3px;
+    padding: 5.5px;
     color: white;
     width: 210px;
     border: 1px solid rgb(0, 0, 0);
@@ -259,7 +259,7 @@ main {
 #gerar-personalizada2 {
     font-size: 12px;
     background-color: #607d8b;
-    padding: 3px;
+    padding: 5.5px;
     color: white;
     width: 210px;
     border: 1px solid rgb(0, 0, 0);
@@ -277,6 +277,10 @@ main {
     height: 215px;
 }
 #dado3{
+    margin: 0 auto 10px auto;
+}
+#dado3B{
+    display: none;
     margin: 0 auto 10px auto;
 }
 #quantidade-especiais{
@@ -324,7 +328,7 @@ main {
     transform: scale(1.1);
 }
 #gerar-personalizada3 {
-    padding: 3px;
+    padding: 5.5px;
     font-size: 12px;
     background-color: #607d8b;
     color: white;

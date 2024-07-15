@@ -91,6 +91,13 @@ function gerarSenhaPersonalizada(){
         document.getElementById('boneco1').style.display ='none'
         document.getElementById('boneco2').style.display ='block'
     }
+
+    let blocoEspeciais = window.getComputedStyle(document.getElementById('bloco-especiais')).display == 'block';
+
+    if(blocoEspeciais){
+        document.getElementById('dado3').style.display='none'
+        document.getElementById('dado3B').style.display='block'
+    }
 }
 
 function gerarSenhaAleatoria() {
