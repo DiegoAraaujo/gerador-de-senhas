@@ -74,17 +74,17 @@ function copiarParaAreaDeTransferencia() {
     alert('Senha copiada para a área de transferência!');
 }
 function compartilharFuncao(){
-   let opcoesDeCompartilhar = document.getElementById("contatos")
-   opcoesDeCompartilhar.style.display = "block"
-   let campoSenha = document.getElementById('senha').textContent;
-   let blocoSenha = document.getElementById("senha-compartilhar");
-   if (campoSenha == 'SUA SENHA AQUI'){
-        return;
-   }else{
-    let senha = campoSenha
-    blocoSenha.innerText += senha
-   }
+   document.getElementById("contatos").style.display = "block"
 
+    let campoSenha = document.getElementById('senha').textContent;
+    let blocoSenha = document.getElementById("senha-compartilhar");
+
+    if (campoSenha == 'SUA SENHA AQUI'){
+      return;
+    }else{
+        let senha = campoSenha
+        blocoSenha.innerText = "Sua senha é: " + senha;
+    }
 }
 function fecharCompartilhamento(){
     let opcoesDeCompartilhar = document.getElementById("contatos")

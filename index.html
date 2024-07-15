@@ -7,119 +7,116 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <p>GERADOR DE SENHAS 🔑</p>
-    </header>
-    <main>
-        <div id="campo-principal">
-            <div id="campo-quantidade">
-                Tamanho da senha: <br>
-                <div>
-                    <input type="number" name="" id="tamanho-palavra" min="1" oninput="atualizarPlaceholders()">
-                    <img src="imagens/botao-sair.png" alt="" id="botaoSair" onclick="apagarTamanhoPalavra()">
+    <div id="pagina">
+        <header>
+            <p>GERADOR DE SENHAS 🔑</p>
+        </header>
+        <main>
+            <div id="campo-principal">
+                <div id="campo-quantidade">
+                    Tamanho da senha: <br>
+                    <div>
+                        <input type="number" name="" id="tamanho-palavra" min="1" oninput="atualizarPlaceholders()">
+                        <img src="imagens/botao-sair.png" alt="" id="botaoSair" onclick="apagarTamanhoPalavra()">
+                    </div>
+                </div>
+                <div id="valores-indicados">
+                    <div class="sugestao" onclick="doubleFunctionValues('4')">04</div>
+                    <div class="sugestao" onclick="doubleFunctionValues('6')">06</div>
+                    <div class="sugestao" onclick="doubleFunctionValues('8')">08</div>
+                    <div class="sugestao" onclick="doubleFunctionValues('10')">10</div>
+                    <div class="sugestao" onclick="doubleFunctionValues('12')">12</div>
+                </div>
+                <div id="botoes">
+                    <button id="botao1" onclick="gerarSenhaAleatoria()">GERAR SENHA</button>
+                    <button id="botao2" onclick="mostrarBloco('bloco-letras')">PERSONALIZAR SENHA</button>
                 </div>
             </div>
-            <div id="valores-indicados">
-                <div class="sugestao" onclick="doubleFunctionValues('4')">04</div>
-                <div class="sugestao" onclick="doubleFunctionValues('6')">06</div>
-                <div class="sugestao" onclick="doubleFunctionValues('8')">08</div>
-                <div class="sugestao" onclick="doubleFunctionValues('10')">10</div>
-                <div class="sugestao" onclick="doubleFunctionValues('12')">12</div>
+            <div id="bloco-letras" style="display: none;">
+                <div id="dado1">
+                    <img src="imagens/1.png" alt="">
+                </div>
+                Quantidade de letras:<br>
+                <input type="number" name="" id="quantidade-letras" min="0" oninput="doubleFunctionButton()">
+                <img src="imagens/botao-sair.png" alt="" id="apagar-letras" onclick="apagarLetras()">
+                <div id="letras-opcoes">
+                    Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm,<br> Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Ww, Xx, Yy, Zz
+                </div>
+                <div id="prox-e-volt-letras">
+                    <button id="voltar-letras" onclick="mostrarBloco('campo-principal')">voltar</button>
+                    <button id="avancar-letras" onclick="mostrarBloco('bloco-numeros')">proximo</button>
+                    <button id="gerar-personalizada1" onclick="gerarSenhaPersonalizada()" style="display: none;">GERAR SENHA PERSONALIZADA</button>
+                </div>
             </div>
-            <div id="botoes">
-                <button id="botao1" onclick="gerarSenhaAleatoria()">GERAR SENHA</button>
-                <button id="botao2" onclick="mostrarBloco('bloco-letras')">PERSONALIZAR SENHA</button>
+            <div id="bloco-numeros" style="display: none;">
+                <div id="dado2">
+                    <img src="imagens/2.png" alt="">
+                </div>
+                Quantidade de numeros:<br>
+                <input type="number" name="" id="quantidade-numeros" min="0"  oninput="doubleFunctionButton()">
+                <img src="imagens/botao-sair.png" alt="" id="apagar-numeros" onclick="apagarNumeros()">
+                <div id="numeros-opcoes">
+                    0,1,2,3,4,5,6,7,8,9
+                </div>
+                <div id="prox-e-volt-num">
+                    <button id="voltar-numeros" onclick="mostrarBloco('bloco-letras')">voltar</button>
+                    <button id="avancar-numeros" onclick="mostrarBloco('bloco-especiais')">proximo</button>
+                    <button id="gerar-personalizada2" onclick="gerarSenhaPersonalizada()" style="display: none;">GERAR SENHA PERSONALIZADA</button>
+                </div>
             </div>
-        </div>
-
-        <div id="bloco-letras" style="display: none;">
-            <div id="dado1">
-                <img src="imagens/1.png" alt="">
+            <div id="bloco-especiais" style="display: none;">
+                <div id="dado3">
+                    <img src="imagens/3.png" alt="">
+                </div>
+                <div id="dado3B">
+                    <img src="imagens/4.png" alt="">
+                </div>
+                Quantidade de simbolos especiais:<br>
+                <input type="number" name="" id="quantidade-especiais" min="0"  oninput="doubleFunctionButton()">
+                <img src="imagens/botao-sair.png" alt="" id="apagar-especiais" onclick="apagarEspeciais()">
+                <div id="especiais-opcoes">
+                    !,@,#,$,%,^,&,*,(),-,_,+,=,{,},[,],|,\,\,:,;,',,>,?,,.,/,~,`
+                </div>
+                <div id="prox-e-volt-esp">
+                    <button id="voltar-especiais" onclick="mostrarBloco('bloco-numeros')">voltar</button>
+                    <button id="gerar-personalizada3" onclick="gerarSenhaPersonalizada()">GERAR SENHA PERSONALIZADA</button>
+                </div>
             </div>
-            Quantidade de letras:<br>
-            <input type="number" name="" id="quantidade-letras" min="0" oninput="doubleFunctionButton()">
-            <img src="imagens/botao-sair.png" alt="" id="apagar-letras" onclick="apagarLetras()">
-            <div id="letras-opcoes">
-                Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm,<br> Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Ww, Xx, Yy, Zz
+            <div id="vejaSuaSenha">
+                <div id="senha">SUA SENHA AQUI</div>
+                <div id="asteriscos">SUA SENHA AQUI</div>
+                <img src="imagens/olhoAberto.png" alt="" id="olho-aberto" onclick="esconderSenha()">
+                <img src="imagens/olhoOculto.png" alt="" id="olho-fechado" onclick="exibirSenha()">
             </div>
-            <div id="prox-e-volt-letras">
-                <button id="voltar-letras" onclick="mostrarBloco('campo-principal')">voltar</button>
-                <button id="avancar-letras" onclick="mostrarBloco('bloco-numeros')">proximo</button>
-                <button id="gerar-personalizada1" onclick="gerarSenhaPersonalizada()" style="display: none;">GERAR SENHA PERSONALIZADA</button>
+            <div id="maisOpcoes">
+                <img src="imagens/copiar.png" alt="" onclick="copiarParaAreaDeTransferencia()" id="copiar">
+                <img src="imagens/compartilhar.png" alt="" id="compartilhar" onclick="compartilharFuncao()">
+                <img src="imagens/info.png" alt="" id="info" title="bastante cuidado com quem compartilha sua senha! ">
             </div>
-        </div>
-
-        <div id="bloco-numeros" style="display: none;">
-            <div id="dado2">
-                <img src="imagens/2.png" alt="">
+            <div id="boneco">
+                <img src="imagens/boneco1.png" alt="" id="boneco1">
+                <img src="imagens/boneco2.png" alt="" id="boneco2">
             </div>
-            Quantidade de numeros:<br>
-            <input type="number" name="" id="quantidade-numeros" min="0"  oninput="doubleFunctionButton()">
-            <img src="imagens/botao-sair.png" alt="" id="apagar-numeros" onclick="apagarNumeros()">
-            <div id="numeros-opcoes">
-                0,1,2,3,4,5,6,7,8,9
+        </main>
+        <footer>
+            <div id="creditos">
+                <p>Conheça-nos melhor, visite: </p>
+                <a href="https://github.com/DiegoAraaujo">🔗 https://github.com/DiegoAraaujo</a><br>
+                <a href="https://github.com/iuryallan"> 🔗 https://github.com/iuryallan</a>
+                <img src="imagens/botao-sair.png" alt="" id="fechar-creditos" onclick="sumirCreditosComClique()">
             </div>
-            <div id="prox-e-volt-num">
-                <button id="voltar-numeros" onclick="mostrarBloco('bloco-letras')">voltar</button>
-                <button id="avancar-numeros" onclick="mostrarBloco('bloco-especiais')">proximo</button>
-                <button id="gerar-personalizada2" onclick="gerarSenhaPersonalizada()" style="display: none;">GERAR SENHA PERSONALIZADA</button>
-            </div>
-        </div>
-
-        <div id="bloco-especiais" style="display: none;">
-            <div id="dado3">
-                <img src="imagens/3.png" alt="">
-            </div>
-            <div id="dado3B">
-                <img src="imagens/4.png" alt="">
-            </div>
-            Quantidade de simbolos especiais:<br>
-            <input type="number" name="" id="quantidade-especiais" min="0"  oninput="doubleFunctionButton()">
-            <img src="imagens/botao-sair.png" alt="" id="apagar-especiais" onclick="apagarEspeciais()">
-            <div id="especiais-opcoes">
-                !,@,#,$,%,^,&,*,(),-,_,+,=,{,},[,],|,\,\,:,;,',,>,?,,.,/,~,`
-            </div>
-            <div id="prox-e-volt-esp">
-                <button id="voltar-especiais" onclick="mostrarBloco('bloco-numeros')">voltar</button>
-                <button id="gerar-personalizada3" onclick="gerarSenhaPersonalizada()">GERAR SENHA PERSONALIZADA</button>
-            </div>
-        </div>     
-
-        <div id="vejaSuaSenha">
-            <div id="senha">SUA SENHA AQUI</div>
-            <div id="asteriscos">SUA SENHA AQUI</div>
-            <img src="imagens/olhoAberto.png" alt="" id="olho-aberto" onclick="esconderSenha()">
-            <img src="imagens/olhoOculto.png" alt="" id="olho-fechado" onclick="exibirSenha()">
-        </div>
-        <div id="maisOpcoes">
-            <img src="imagens/copiar.png" alt="" onclick="copiarParaAreaDeTransferencia()" id="copiar">
-            <img src="imagens/compartilhar.png" alt="" id="compartilhar" onclick="compartilharFuncao()">
-            <img src="imagens/info.png" alt="" id="info" title="bastante cuidado com quem compartilha sua senha! ">
-        </div>
-        <div id="boneco">
-            <img src="imagens/boneco1.png" alt="" id="boneco1">
-            <img src="imagens/boneco2.png" alt="" id="boneco2">
-        </div>
-    </main>
-    <footer>
-        <div id="creditos">
-            <p>Conheça-nos melhor, visite: </p>
-            <a href="https://github.com/DiegoAraaujo">🔗 https://github.com/DiegoAraaujo</a><br>
-            <a href="https://github.com/iuryallan"> 🔗 https://github.com/iuryallan</a>
-            <img src="imagens/botao-sair.png" alt="" id="fechar-creditos" onclick="sumirCreditosComClique()">
-        </div>
-        <img src="imagens/gitHub-Photoroom (1).png" alt="" onclick="motrarRecadoComClique()" onmouseover="motrarRecadoSemClique()">
-    </footer>
-
+            <img src="imagens/gitHub-Photoroom (1).png" alt="" onclick="motrarRecadoComClique()" onmouseover="motrarRecadoSemClique()">
+        </footer>
         <div id="contatos">
             <img src="imagens/botao-sair.png" alt="" id="fechar-compartilhamento" onclick="fecharCompartilhamento()">
-            <p id="senha-compartilhar">Sua senha é:</p> 
+            <p id="senha-compartilhar">Sua senha é:</p>
             <div id="logos">
                 <a href="#"><img src="imagens/whatsapp-icon (1).png" alt="" onclick="shareViaWhatsApp()"></a>
                 <a href="#"><img src="imagens/basic-message (1).png" alt="" onclick="shareViaSMS()"></a>
                 <a href="#"><img src="imagens/Instagram_icon.png" alt="" onclick="shareViaInstagram()"></a>
             </div>
         </div>
+    </div>
         <script src="estilo.js"></script>
         <script src="script1.js"></script>
         <script src="script2.js"></script>
