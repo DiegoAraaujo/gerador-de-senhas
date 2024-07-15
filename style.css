@@ -152,6 +152,7 @@ main {
     display: flex;
     justify-content: space-around;
     margin: 13px auto 0 auto;
+    width: 420px;
 }
 #avancar-letras {
     font-size: 16px;
@@ -233,6 +234,7 @@ main {
     display: flex;
     justify-content: space-around;
     margin: 26px auto 0 auto;
+    width: 420px;
 }
 #voltar-numeros {
     font-size: 16px;
@@ -318,6 +320,7 @@ main {
     display: flex;
     justify-content: space-around;
     margin: 26px auto 0 auto;
+    width: 420px;
 }
 #voltar-especiais {
     padding: 3px;
