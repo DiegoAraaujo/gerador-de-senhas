@@ -96,11 +96,13 @@ function shareViaWhatsApp() {
 
     if(camposenha.textContent !== 'SUA SENHA AQUI'){
         let senha = document.getElementById('senha').textContent;
-        var valorCompartilhar = "SUA SENHA É: ";
+        let valorCompartilhar = "SUA SENHA É: ";
         valorCompartilhar += senha;
+
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(valorCompartilhar)}`, '_blank');
     }else{
-        var valorCompartilhar = "NENHUMA SENHA GERADA";
+        let valorCompartilhar = "NENHUMA SENHA GERADA";
+        
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(valorCompartilhar)}`, '_blank');
     }
 }
