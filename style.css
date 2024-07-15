@@ -434,22 +434,21 @@ a:hover {
     display: none;
     margin: auto;
     position: absolute;
-    top: 200px;
+    top: 370px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    padding: 20px;
-    width: 400px;
+    padding: 10px;
+    width: 300px;
     border: 2px solid black;
     border-radius: 40px;
-    border-top-right-radius: 20px;
     background-color: white;
 }
 #fechar-compartilhamento{
     display: block;
     position: relative;
-    top: -10px;
-    left: 390px;
+    top: -4px;
+    left: 270px;
     cursor: pointer;
     transition: transform 0.2s;
 }
