@@ -71,7 +71,6 @@ function copiarParaAreaDeTransferencia() {
     document.execCommand('copy');
     document.body.removeChild(textarea);
 
-    alert('Senha copiada para a área de transferência!');
 }
 function compartilharFuncao(){
 
@@ -97,7 +96,6 @@ function fecharCompartilhamento(){
 
 function shareViaWhatsApp() {
     let camposenha = document.getElementById("senha");
-
     if(camposenha.textContent !== 'SUA SENHA AQUI'){
         let senha = document.getElementById('senha').textContent;
         let valorCompartilhar = "SUA SENHA É: ";
