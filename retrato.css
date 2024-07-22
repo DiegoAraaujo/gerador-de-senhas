@@ -4,7 +4,7 @@
 }
 body {
     background-color: #009688;
-    height: 100vh;
+    height: 97vh;
     font-family: arial;
     display: flex;
     justify-content: center;
@@ -14,263 +14,231 @@ body {
 #pagina{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 97vh;
     max-width: 500px;
     width: 100%;
 }
 
-header{
-    margin: auto;
+header {
     background-color: #009688;
     color: white;
     width: 100%;
     max-width: 500px;
-    padding: 3px;
     box-sizing: border-box;
     text-align: center;
 }
-main{
+
+main {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: auto;
     width: 100%;
     max-width: 500px;
-    padding: 5px;
     background-color: #009688;
     box-sizing: border-box;
 }
-/* CAMPO PRINCIPAL */
-#campo-principal{
+
+#campo-principal {
     align-items: center;
-    padding: 10px 10px 0 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     background-color: white;
 }
-#campo-quantidade{
+
+#campo-quantidade {
     box-sizing: border-box;
     text-align: center;
     width: 100%;
     max-width: 190px;
 }
-#tamanho-palavra{
+
+#tamanho-palavra {
     width: 155px;
     text-align: center;
 }
-#valores-indicados{
+
+#valores-indicados {
     width: 100%;
     max-width: 160px;
     display: flex;
     justify-content: space-between;
 }
-.sugestao{
+
+.sugestao {
     cursor: pointer;
     border: 1px solid black;
-    border-radius:50% ;
-    padding: 2.5px;
+    border-radius: 50%;
 }
+
 .sugestao:hover {
     transform: scale(1.2);
     border: 1px solid #c2e9ff;
     background-color: #002420;
     color: #c2e9ff;
-    cursor: pointer;
 }
-#botoes{
+
+#botoes {
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
-/* .............. */
 
-/* CAMPO LETRAS */
-#bloco-letras{
+#bloco-letras {
     align-items: center;
-    padding: 10px 10px 0 10px;
     box-sizing: border-box;
     display: none;
     flex-direction: column;
-    gap: 15px;
     background-color: white;
 }
-#quantidade-letras{
+
+#quantidade-letras {
     width: 154px;
     text-align: center;
 }
-#letras-opcoes{
+
+#letras-opcoes {
     color: white;
     background-color: #009688;
-    padding: 20px;
     box-sizing: border-box;
     border-radius: 30px;
 }
-#prox-e-volt-letras{
+
+#prox-e-volt-letras {
     display: flex;
     justify-content: center;
-    gap: 10px;
-}
-#voltar-letras{
-    padding: 10px;
 }
 
-#gerar-personalizada1{
+#voltar-letras {
+}
+
+#gerar-personalizada1 {
     display: none;
-    padding: 10px;
 }
-/* .............. */
 
-/* CAMPO NUMEROS */
-
-#bloco-numeros{
+#bloco-numeros {
     display: none;
     align-items: center;
-    padding: 10px 10px 0 10px;
     box-sizing: border-box;
     display: none;
     flex-direction: column;
-    gap: 15px;
     background-color: white;
 }
-#quantidade-numeros{
+
+#quantidade-numeros {
     width: 154px;
     text-align: center;
 }
-#numeros-opcoes{
+
+#numeros-opcoes {
     color: white;
     background-color: #009688;
-    padding: 20px;
     box-sizing: border-box;
     border-radius: 30px;
 }
-#prox-e-volt-num{
+
+#prox-e-volt-num {
     display: flex;
     justify-content: center;
-    gap: 20px;
-}
-#voltar-numeros{
-    padding: 10px;
 }
 
-#gerar-personalizada2{
+#voltar-numeros {
+}
+
+#gerar-personalizada2 {
     display: none;
-    padding: 10px;
 }
-/* .............. */
 
-/* CAMPO NUMEROS */
-
-#bloco-especiais{
+#bloco-especiais {
     display: none;
     align-items: center;
-    padding: 10px 10px 0 10px;
     box-sizing: border-box;
     display: none;
     flex-direction: column;
-    gap: 15px;
     background-color: white;
 }
-#quantidade-especiais{
+
+#quantidade-especiais {
     width: 154px;
     text-align: center;
 }
-#especiais-opcoes{
+
+#especiais-opcoes {
     color: white;
     background-color: #009688;
-    padding: 20px;
     box-sizing: border-box;
     border-radius: 30px;
 }
-#prox-e-volt-esp{
+
+#prox-e-volt-esp {
     display: flex;
     justify-content: center;
-
-    gap: 20px;
-}
-#voltar-especiais{
-    padding: 10px;
 }
 
-#gerar-personalizada3{
-    padding: 10px;
+#voltar-especiais {
 }
-/* .............. */
 
-/* Exibição de senha */
+#gerar-personalizada3 {
+}
 
-#vejaSuaSenha{
+#vejaSuaSenha {
     display: flex;
     justify-content: center;
-    margin: auto;
     background-color: #009688;
     width: 100%;
     max-width: 500px;
-    padding: 5px;
     box-sizing: border-box;
 }
-.olho{
+
+.olho {
     background-color: white;
     max-width: 21px;
     border-radius: 0 5px 5px 0;
 }
 
-#senha{
+#senha {
     text-align: center;
     background-color: white;
-    padding: 5px;
     max-width: 200px;
     width: 100%;
-    border-radius: 5px 0 0 5px ;
+    border-radius: 5px 0 0 5px;
 }
 
-#senha{
-    text-align: center;
-    background-color: white;
-    padding: 5px;
-    max-width: 200px;
-    width: 100%;
-    border-radius: 5px 0 0 5px ;
-}
-#olho-aberto{
+#olho-aberto {
     position: relative;
     top: 3px;
 }
-#asteriscos{
+
+#asteriscos {
     display: none;
     text-align: center;
     background-color: white;
-    padding: 5px;
     max-width: 200px;
     width: 100%;
-    border-radius: 5px 0 0 5px ;
+    border-radius: 5px 0 0 5px;
 }
-#olho-fechado{
+
+#olho-fechado {
     display: none;
     position: relative;
     top: 4px;
 }
 
-#maisOpcoes{
+#maisOpcoes {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin: auto;
-    padding: 5px;
-    box-sizing: border-box;
     width: 100%;
     max-width: 500px;
     background-color: #009688;
+    box-sizing: border-box;
 }
-#bloco-contatos{
+
+#bloco-contatos {
     display: none;
-    margin: auto;
     max-width: 500px;
     width: 100%;
 }
-#contatos{
-    margin: auto;
+
+#contatos {
     color: rgb(0, 0, 0);
     max-width: 300px;
     display: flex;
@@ -278,70 +246,74 @@ main{
     background-color: rgb(255, 255, 255);
     border: 2px solid #c2e9ff;
 }
-#msg-compartilhar{
-    padding: 5px;
+
+#msg-compartilhar {
     display: flex;
     justify-content: space-between;
 }
-#logos{
+
+#logos {
     display: flex;
     justify-content: space-around;
 }
-footer{
-    padding: 3px;
+
+footer {
     box-sizing: border-box;
     text-align: right;
-    margin: auto;
     background-color: white;
     border: 2px solid #009688;
     max-width: 500px;
     width: 100%;
 }
-#creditos{
+
+#creditos {
     display: none;
     box-sizing: border-box;
-    padding: 3px;
     background-color: white;
     border: 2px solid #009688;
     width: 100%;
     max-width: 300px;
     border-radius: 15px;
 }
-#boneco{
+
+#boneco {
     display: flex;
     align-items: flex-end;
-    padding-left: 17px;
     box-sizing: border-box;
-    margin: auto;
     background-color: #009688;
     max-width: 500px;
     height: 200px;
     width: 100%;
 }
 
-
-#copiar{
+#copiar {
     cursor: pointer;
     transition: transform 0.2s;
 }
-#copiar:hover{
+
+#copiar:hover {
     transform: scale(1.1);
 }
-#compartilhar{
+
+#compartilhar {
     cursor: pointer;
     transition: transform 0.2s;
 }
-#compartilhar:hover{
+
+#compartilhar:hover {
     transform: scale(1.150);
 }
-#info{
+
+#info {
     cursor: pointer;
     transition: transform 0.2s;
 }
-#info:hover{
+
+#info:hover {
     transform: scale(1.150);
 }
-#fechar-compartilhamento:hover{
+
+#fechar-compartilhamento:hover {
     transform: scale(1.150);
     cursor: pointer;
 }
