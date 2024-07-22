@@ -17,6 +17,7 @@ header{
     text-align: center;
 }
 main{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -236,10 +237,13 @@ main{
 }
 
 #contatos{
+    position: absolute;
+    top: 95px;
+    left: 90px;
     color: rgb(0, 0, 0);
     padding: 15px;
     margin:auto;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: rgb(255, 255, 255);
