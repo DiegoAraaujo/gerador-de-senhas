@@ -90,7 +90,7 @@ function compartilharFuncao(){
       }
 }
 function fecharCompartilhamento(){
-    let opcoesDeCompartilhar = document.getElementById("contatos")
+    let opcoesDeCompartilhar = document.getElementById("bloco-contatos")
     opcoesDeCompartilhar.style.display = "none"
 }
 
