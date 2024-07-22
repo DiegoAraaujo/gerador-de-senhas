@@ -235,21 +235,19 @@ main{
     max-width: 500px;
     background-color: #009688;
 }
-
-#contatos{
-    position: absolute;
-    top: 95px;
-    left: 90px;
-    color: rgb(0, 0, 0);
-    padding: 15px;
-    margin:auto;
+#bloco-contatos{
     display: none;
-    flex-direction: column;
-    gap: 10px;
-    background-color: rgb(255, 255, 255);
+    margin: auto;
+    max-width: 500px;
     width: 100%;
+}
+#contatos{
+    margin: auto;
+    color: rgb(0, 0, 0);
     max-width: 300px;
-    border-radius: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
     border: 2px solid #c2e9ff;
 }
 #msg-compartilhar{

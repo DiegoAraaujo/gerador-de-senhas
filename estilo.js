@@ -78,7 +78,7 @@ function compartilharFuncao(){
     let blocoSenha = document.getElementById("senha-compartilhar");
     let senhaGerada = document.getElementById('senha').textContent
     if (senhaGerada !== 'SUA SENHA AQUI'){
-        document.getElementById("contatos").style.display = "flex"
+        document.getElementById("bloco-contatos").style.display = "block"
     }else{
         window.alert('Voce não gerou nenhuma senha!')
     }
