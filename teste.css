@@ -284,9 +284,10 @@ footer{
     width: 100%;
 }
 #creditos{
+    display: none;
     position: absolute;
-    top: -17px;
-    left: 85px;
+    top: -76px;
+    left: 190px;
     box-sizing: border-box;
     padding: 3px;
     background-color: white;
