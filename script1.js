@@ -92,7 +92,7 @@ function gerarSenhaPersonalizada(){
         document.getElementById('boneco2').style.display ='block'
     }
 
-    let blocoEspeciais = window.getComputedStyle(document.getElementById('bloco-especiais')).display == 'block';
+    let blocoEspeciais = window.getComputedStyle(document.getElementById('bloco-especiais')).display == 'flex';
 
     if(blocoEspeciais){
         document.getElementById('dado3').style.display='none'
