@@ -209,19 +209,32 @@ main{
     width: 100%;
     border-radius: 5px 0 0 5px ;
 }
-#olho-aberto{
 
+#senha{
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 5px 0 0 5px ;
+}
+#olho-aberto{
+    position: relative;
+    top: 3px;
 }
 #asteriscos{
     display: none;
+    text-align: center;
     background-color: white;
     padding: 5px;
-    max-width: 134px;
+    max-width: 200px;
     width: 100%;
     border-radius: 5px 0 0 5px ;
 }
 #olho-fechado{
     display: none;
+    position: relative;
+    top: 4px;
 }
 
 #maisOpcoes{
@@ -292,4 +305,31 @@ footer{
     max-width: 500px;
     height: 200px;
     width: 100%;
+}
+
+
+#copiar{
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#copiar:hover{
+    transform: scale(1.1);
+}
+#compartilhar{
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#compartilhar:hover{
+    transform: scale(1.1);
+}
+#info{
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#info:hover{
+    transform: scale(1.1);
+}
+#fechar-compartilhamento:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
