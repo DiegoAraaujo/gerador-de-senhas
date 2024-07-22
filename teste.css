@@ -40,6 +40,10 @@ main{
 #campo-quantidade{
     text-align: center;
 }
+#tamanho-palavra{
+    width: 154px;
+    text-align: center;
+}
 #valores-indicados{
     width: 100%;
     max-width: 160px;
@@ -76,6 +80,10 @@ main{
     gap: 15px;
     background-color: white;
 }
+#quantidade-letras{
+    width: 154px;
+    text-align: center;
+}
 #letras-opcoes{
     color: white;
     background-color: #009688;
@@ -110,6 +118,10 @@ main{
     gap: 15px;
     background-color: white;
 }
+#quantidade-numeros{
+    width: 154px;
+    text-align: center;
+}
 #numeros-opcoes{
     color: white;
     background-color: #009688;
@@ -143,6 +155,10 @@ main{
     flex-direction: column;
     gap: 15px;
     background-color: white;
+}
+#quantidade-especiais{
+    width: 154px;
+    text-align: center;
 }
 #especiais-opcoes{
     color: white;
