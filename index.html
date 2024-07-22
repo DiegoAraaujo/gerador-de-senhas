@@ -104,27 +104,31 @@
             <img src="imagens/info.png" alt="" id="info" title="bastante cuidado com quem compartilha sua senha! ">
         </div>
         <div id="boneco">
-            <img src="imagens/boneco1.png" alt="" id="boneco1" style="display:none;">
-            <img src="imagens/boneco2.png" alt="" id="boneco2" style="display:none;">
+            <img src="imagens/boneco1.png" alt="" id="boneco1">
+            <img src="imagens/boneco2.png" alt="" id="boneco2" style="display: none;">
         </div>
-        <footer>
-            <div id="creditos">
-                <p>Conheça-nos melhor, visite: </p>
-                <a href="https://github.com/DiegoAraaujo">🔗 https://github.com/DiegoAraaujo</a><br>
-                <a href="https://github.com/iuryallan"> 🔗 https://github.com/iuryallan</a>
-                <img src="imagens/botao-sair.png" alt="" id="fechar-creditos" onclick="sumirCreditosComClique()">
-            </div>
-            <img src="imagens/gitHub-Photoroom (1).png" alt="" onclick="motrarRecadoComClique()" onmouseover="motrarRecadoSemClique()">
-        </footer>
         <div id="contatos">
-            <img src="imagens/botao-sair.png" alt="" id="fechar-compartilhamento" onclick="fecharCompartilhamento()">
-            <p id="senha-compartilhar">Sua senha é:</p>
+            <div id="msg-compartilhar">
+                <p id="senha-compartilhar">Sua senha é:</p>
+                <img src="imagens/botao-sair.png" alt="" id="fechar-compartilhamento" onclick="fecharCompartilhamento()">
+            </div>
             <div id="logos">
                 <a href="#"><img src="imagens/whatsapp-icon (1).png" alt="" onclick="shareViaWhatsApp()"></a>
                 <a href="#"><img src="imagens/basic-message (1).png" alt="" onclick="shareViaSMS()"></a>
                 <a href="#"><img src="imagens/Instagram_icon.png" alt="" onclick="shareViaInstagram()"></a>
             </div>
         </div>
+        <footer>
+            <img src="imagens/gitHub-Photoroom (1).png" alt="" onclick="motrarRecadoComClique()" onmouseover="motrarRecadoSemClique()">
+            <div id="creditos" style="display: none;">
+                    <img src="imagens/botao-sair.png" alt="" id="fechar-creditos" onclick="sumirCreditosComClique()">
+                <div style="text-align: left;">
+                    <a href="https://github.com/DiegoAraaujo" target="_blank">🔗 https://github.com/DiegoAraaujo</a><br>
+                    <a href="https://github.com/iuryallan" target="_blank"> 🔗 https://github.com/iuryallan</a>
+                </div>
+            </div>
+        </footer>
+
         <script src="estilo.js"></script>
         <script src="script1.js"></script>
         <script src="script2.js"></script>

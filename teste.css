@@ -37,6 +37,9 @@ main{
     gap: 15px;
     background-color: white;
 }
+#campo-quantidade{
+    text-align: center;
+}
 #valores-indicados{
     width: 100%;
     max-width: 160px;
@@ -68,7 +71,7 @@ main{
     align-items: center;
     padding: 10px 10px 0 10px;
     box-sizing: border-box;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 15px;
     background-color: white;
@@ -98,10 +101,11 @@ main{
 /* CAMPO NUMEROS */
 
 #bloco-numeros{
+    display: none;
     align-items: center;
     padding: 10px 10px 0 10px;
     box-sizing: border-box;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 15px;
     background-color: white;
@@ -131,10 +135,11 @@ main{
 /* CAMPO NUMEROS */
 
 #bloco-especiais{
+    display: none;
     align-items: center;
     padding: 10px 10px 0 10px;
     box-sizing: border-box;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 15px;
     background-color: white;
@@ -212,4 +217,61 @@ main{
     width: 100%;
     max-width: 500px;
     background-color: #009688;
+}
+
+#contatos{
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    margin:auto;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 300px;
+    border-radius: 200px;
+    border: 2px solid #c2e9ff;
+}
+#msg-compartilhar{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+#logos{
+    display: flex;
+    justify-content: space-around;
+}
+footer{
+    position: relative;
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: right;
+    margin: auto;
+    background-color: white;
+    border: 2px solid #009688;
+    max-width: 500px;
+    width: 100%;
+}
+#creditos{
+    position: absolute;
+    top: -17px;
+    left: 85px;
+    box-sizing: border-box;
+    padding: 3px;
+    background-color: white;
+    border: 2px solid #009688;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+}
+#boneco{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 17px;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: #009688;
+    max-width: 500px;
+    height: 200px;
+    width: 100%;
 }
