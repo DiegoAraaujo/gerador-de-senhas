@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="teste.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="retrato.css" media="(max-width: 600px)">
 </head>
 <body>
+    <div id="pagina">
         <header>
             <p>GERADOR DE SENHAS 🔑</p>
         </header>
@@ -55,7 +57,7 @@
                 </div>
                 Quantidade de numeros:<br>
                 <div>
-                    <input type="number" name="" id="quantidade-numeros" min="0"  oninput="doubleFunctionButton()">
+                    <input type="number" name="" id="quantidade-numeros" min="0" oninput="doubleFunctionButton()">
                     <img src="imagens/botao-sair.png" alt="" id="apagar-numeros" onclick="apagarNumeros()">
                 </div>
                 <div id="numeros-opcoes">
@@ -76,7 +78,7 @@
                 </div>
                 Quantidade de simbolos especiais:<br>
                 <div>
-                    <input type="number" name="" id="quantidade-especiais" min="0"  oninput="doubleFunctionButton()">
+                    <input type="number" name="" id="quantidade-especiais" min="0" oninput="doubleFunctionButton()">
                     <img src="imagens/botao-sair.png" alt="" id="apagar-especiais" onclick="apagarEspeciais()">
                 </div>
                 <div id="especiais-opcoes">
@@ -116,16 +118,13 @@
                 </div>
             </div>
         </div>
-
         <div id="boneco">
             <img src="imagens/boneco1.png" alt="" id="boneco1">
             <img src="imagens/boneco2.png" alt="" id="boneco2" style="display: none;">
-            </div>
         </div>
-
         <footer>
             <img src="imagens/gitHub-Photoroom (1).png" alt="" onclick="motrarRecadoComClique()" onmouseover="motrarRecadoSemClique()">
-            <div id="creditos" >
+            <div id="creditos">
                 <img src="imagens/botao-sair.png" alt="" id="fechar-creditos" onclick="sumirCreditosComClique()">
                 <div style="text-align: left;">
                     <a href="https://github.com/DiegoAraaujo" target="_blank">🔗 https://github.com/DiegoAraaujo</a><br>
@@ -133,7 +132,7 @@
                 </div>
             </div>
         </footer>
-
+    </div>    
         <script src="estilo.js"></script>
         <script src="script1.js"></script>
         <script src="script2.js"></script>
