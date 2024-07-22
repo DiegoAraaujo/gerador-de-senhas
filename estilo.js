@@ -133,7 +133,7 @@ function mostrarBloco(blocoId) {
         document.getElementById('bloco-numeros').style.display = 'none';
         document.getElementById('bloco-especiais').style.display = 'none';
 
-        document.getElementById(blocoId).style.display = 'block';
+        document.getElementById(blocoId).style.display = 'flex';
 }
 
 function apagarNumeros(){
