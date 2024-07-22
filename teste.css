@@ -243,7 +243,7 @@ main{
     color: rgb(0, 0, 0);
     padding: 15px;
     margin:auto;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 10px;
     background-color: rgb(255, 255, 255);
