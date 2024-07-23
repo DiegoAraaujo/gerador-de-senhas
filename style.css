@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: bolder;
+    font-size: 20px;
+}
 body {
     height: 100vh;
     font-family: arial;
@@ -42,8 +49,8 @@ main{
     padding: 10px 10px 0 10px;
     box-sizing: border-box;
     display: flex;
+    gap: 30px;
     flex-direction: column;
-    gap: 20px;
     background-color: white;
 }
 #campo-quantidade{
@@ -58,15 +65,16 @@ main{
 }
 #valores-indicados{
     width: 100%;
-    max-width: 160px;
+    max-width: 250px;
     display: flex;
     justify-content: space-between;
 }
 .sugestao{
+    text-align: center;
     cursor: pointer;
     border: 1px solid black;
     border-radius:50% ;
-    padding: 2.5px;
+    padding: 4px;
 }
 .sugestao:hover {
     transform: scale(1.2);
@@ -233,6 +241,7 @@ main{
     max-width: 200px;
     width: 100%;
     border-radius: 5px 0 0 5px ;
+    word-wrap: break-word;
 }
 #olho-fechado{
     display: none;
