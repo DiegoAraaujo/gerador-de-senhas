@@ -88,6 +88,20 @@ main{
     justify-content: center;
     gap: 10px;
 }
+#botao1{
+    padding: 7px;
+    transition: ease transform 0.2s;
+}
+#botao1:hover{
+    transform: scale(1.1);
+}
+#botao2{
+    padding: 7px;
+    transition: ease transform 0.2s;
+}
+#botao2:hover{
+    transform: scale(1.1);
+}
 /* .............. */
 
 /* CAMPO LETRAS */
@@ -117,12 +131,29 @@ main{
     gap: 10px;
 }
 #voltar-letras{
-    padding: 10px;
-}
+    padding: 7px;
+    transition: ease transform 0.2s;
 
+}
+#voltar-letras:hover{
+    transform: scale(1.1);
+}
+#avancar-letras{
+    padding: 7px;
+    transition: ease transform 0.2s;
+
+}
+#avancar-letras:hover{
+    transform: scale(1.1);
+}
 #gerar-personalizada1{
     display: none;
-    padding: 10px;
+    padding: 7px;
+    transition: ease transform 0.2s;
+
+}
+#gerar-personalizada1:hover{
+    transform: scale(1.1);
 }
 /* .............. */
 
@@ -155,12 +186,26 @@ main{
     gap: 20px;
 }
 #voltar-numeros{
-    padding: 10px;
+    padding: 7px;
+    transition: ease transform 0.2s;
 }
-
+#voltar-numeros:hover{
+    transform: scale(1.1);
+}
+#avancar-numeros{
+    padding: 7px;
+    transition: ease transform 0.2s;
+}
+#avancar-numeros:hover{
+    transform: scale(1.1);
+}
 #gerar-personalizada2{
     display: none;
     padding: 10px;
+    transition: ease transform 0.2s;
+}
+#gerar-personalizada2:hover{
+    transform: scale(1.1);
 }
 /* .............. */
 
@@ -190,15 +235,28 @@ main{
 #prox-e-volt-esp{
     display: flex;
     justify-content: center;
-
     gap: 20px;
 }
 #voltar-especiais{
-    padding: 10px;
+    padding: 7px;
+    transition: ease transform 0.2s;
 }
-
+#voltar-especiais:hover{
+    transform: scale(1.1);
+}
+#avancar-especiais{
+    padding: 7px;
+    transition: ease transform 0.2s;
+}
+#avancar-especiais:hover{
+    transform: scale(1.1);
+}
 #gerar-personalizada3{
-    padding: 10px;
+    padding:7px;
+    transition: ease transform 0.2s;
+}
+#gerar-personalizada3:hover{
+    transform: scale(1.1);
 }
 /* .............. */
 
