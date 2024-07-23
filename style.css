@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
-.shadows-into-light-regular {
-    font-family: "Shadows Into Light", cursive;
-    font-weight: bolder;
-    font-size: 20px;
-}
+.kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
 body {
     height: 100vh;
     font-family: arial;
