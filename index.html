@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GERADOR DE SENHAS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div id="pagina">
@@ -106,9 +107,11 @@
         </div>
         <div id="bloco-contatos">
             <div id="contatos">
-                <div id="msg-compartilhar">
-                    <p id="senha-compartilhar">Sua senha é:</p>
+                <div id="sair-compartilhamento">
                     <img src="imagens/botao-sair.png" alt="" id="fechar-compartilhamento" onclick="fecharCompartilhamento()">
+                </div>
+                <div id="msg-compartilhar">
+                    <p id="senha-compartilhar">Sua senha é: <span id="senha-gerada"></span></p>
                 </div>
                 <div id="logos">
                     <a href="#"><img src="imagens/whatsapp-icon (1).png" alt="" onclick="shareViaWhatsApp()"></a>
@@ -117,6 +120,7 @@
                 </div>
             </div>
         </div>
+        
         <div id="boneco">
             <img src="imagens/boneco1.png" alt="" id="boneco1">
             <img src="imagens/boneco2.png" alt="" id="boneco2" style="display: none;">

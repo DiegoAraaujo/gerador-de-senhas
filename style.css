@@ -251,13 +251,14 @@ main{
     max-width: 500px;
     background-color: #009688;
 }
-#bloco-contatos{
+#bloco-contatos {
     display: none;
     margin: auto;
     max-width: 500px;
     width: 100%;
 }
-#contatos{
+
+#contatos {
     margin: auto;
     color: rgb(0, 0, 0);
     max-width: 300px;
@@ -265,11 +266,24 @@ main{
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border: 2px solid #c2e9ff;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
-#msg-compartilhar{
+
+#msg-compartilhar {
     padding: 5px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+#sair-compartilhamento{
+    text-align: right;
 }
 #logos{
     display: flex;
