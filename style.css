@@ -2,13 +2,7 @@
     margin: 0;
     padding: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
-.kalam-bold {
-    font-family: "Kalam", cursive;
-    font-weight: 700;
-    font-style: normal;
-  }
 body {
     height: 100vh;
     font-family: arial;
