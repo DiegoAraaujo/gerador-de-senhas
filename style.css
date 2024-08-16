@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+.bebas-neue {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
 body {
     height: 100vh;
     font-family: arial;
@@ -16,6 +22,7 @@ body {
     width: 100%;
 }
 header{
+    font-size: 25px;
     margin: auto;
     background-color: #009688;
     color: white;
