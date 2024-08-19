@@ -93,3 +93,32 @@ function doubleFunctionButton(){
     valoresDinamicos();
     ocultarBlocos();
 }
+
+function limparSenha() {
+    // Seleciona os elementos de senha e asteriscos
+    let senha = document.getElementById('senha');
+    let asteriscos = document.getElementById('asteriscos');
+    
+    // Obtém o conteúdo atual da senha
+    let textoSenha = senha.textContent;
+    
+    // Verifica se a senha é o valor padrão, indicando que ainda não foi gerada
+    if (textoSenha === 'SUA SENHA AQUI') {
+        alert("Nenhuma senha gerada para limpar.");
+        return; // Encerra a função se não houver senha gerada
+    }
+    
+    // Redefine o conteúdo dos elementos
+    senha.textContent = 'SUA SENHA AQUI';
+    asteriscos.textContent = 'SUA SENHA AQUI';
+
+    // Verifica se o elemento de senha está visível ou oculto
+    let visibilidade = getComputedStyle(senha).display;
+    
+    // Se a senha estiver visível, oculta os elementos de visibilidade
+    if (visibilidade === 'inline-block') {
+        document.getElementById('olho-aberto').style.display = 'inline-block';
+        document.getElementById('olho-fechado').style.display = 'none';
+    }
+}
+

@@ -55,7 +55,6 @@ function exibirSenha(){
     document.getElementById('asteriscos').style.display = 'none';
     document.getElementById('senha').style.display = 'inline-block'
 }
-
 function apagarTamanhoPalavra(){
     let tamanhoPalavra = document.getElementById("tamanho-palavra");
     tamanhoPalavra.value = "";
