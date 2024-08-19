@@ -114,13 +114,7 @@ function shareViaSMS() {
     window.location.href = `sms:?body=${encodeURIComponent(valorCompartilhar)}`;
 }
 
-function shareViaInstagram() {
-    let senha = document.getElementById('senha').textContent;
-    var valorCompartilhar = "SUA SENHA É: ";
-    valorCompartilhar += senha;
-    var url = `https://www.instagram.com/direct/inbox/?hl=en&text=${encodeURIComponent(valorCompartilhar)}`;
-    window.open(url, '_blank');
-}
+
 function mostrarBloco(blocoId) {
     let palavra =Number(document.getElementById("tamanho-palavra").value) || 0;
 
@@ -152,4 +146,9 @@ function apagarEspeciais(){
     document.getElementById('voltar-especiais').style.display='inline-block'
     document.getElementById('gerar-personalizada3').style.display ='inline-block'
     document.getElementById("quantidade-especiais").value =''
+}
+
+function usarSite(){
+    document.getElementById("aviso").style.display = 'none';
+    document.getElementById("pagina").style.filter = 'none';
 }
