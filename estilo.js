@@ -76,18 +76,22 @@ function compartilharFuncao(){
     let campoSenha = document.getElementById('senha').textContent;
     let blocoSenha = document.getElementById("senha-compartilhar");
     let senhaGerada = document.getElementById('senha').textContent
+
+    let blocoContatos = document.getElementById('bloco-contatos')
+    blocoContatos.style.display = 'block';
+
     if (senhaGerada !== 'SUA SENHA AQUI'){
-        document.getElementById("bloco-contatos").style.display = "block"
+        blocoContatos.style.display = 'block';
+        setTimeout(function() {
+            blocoContatos.classList.add('mostrar');
+        }, 10);
     }else{
+        blocoContatos.style.display = 'none';
         window.alert('Voce não gerou nenhuma senha!')
-    }
-    if (campoSenha == 'SUA SENHA AQUI'){
         return;
-      }else{
-          let senha = campoSenha
-          blocoSenha.innerText = "Sua senha é: " + senha;
-      }
+    }
 }
+
 function fecharCompartilhamento(){
     let opcoesDeCompartilhar = document.getElementById("bloco-contatos")
     opcoesDeCompartilhar.style.display = "none"
@@ -109,8 +113,18 @@ function shareViaWhatsApp() {
 }
 
 function shareViaSMS() {
-    var valorCompartilhar = "Este é o valor que será compartilhado!";
-    window.location.href = `sms:?body=${encodeURIComponent(valorCompartilhar)}`;
+    let camposenha = document.getElementById("senha");
+    if(camposenha.textContent !== 'SUA SENHA AQUI'){
+        let senha = document.getElementById('senha').textContent;
+        let valorCompartilhar = "SUA SENHA É: ";
+        valorCompartilhar += senha;
+
+        window.location.href = `sms:?body=${encodeURIComponent(valorCompartilhar)}`;
+    }else{
+        let valorCompartilhar = "NENHUMA SENHA GERADA";
+        window.location.href = `sms:?body=${encodeURIComponent(valorCompartilhar)}`;
+    }
+
 }
 
 
