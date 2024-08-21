@@ -325,6 +325,7 @@ main{
     background-color: #009688;
 }
 #bloco-contatos {
+    background-color: white;
     max-width: 500px;
     width: 100%;
     height: 80px;
