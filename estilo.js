@@ -94,6 +94,7 @@ function compartilharFuncao(){
 
 function fecharCompartilhamento(){
     let opcoesDeCompartilhar = document.getElementById("bloco-contatos")
+    opcoesDeCompartilhar.classList.remove('mostrar');
     opcoesDeCompartilhar.style.display = "none"
 }
 
